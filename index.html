@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Capture For Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎤 Presentation Capture</h1>
+            <p class="subtitle">Record your presentation and convert to text</p>
+        </header>
+
+        <div class="status-card">
+            <div id="modelStatus" class="status-message">
+                <span class="status-icon">⏳</span>
+                <span id="statusText">Initializing...</span>
+            </div>
+            <div id="progressBar" class="progress-container" style="display: none;">
+                <div id="progressFill" class="progress-fill"></div>
+                <span id="progressText" class="progress-text">0%</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="recordBtn" class="btn btn-record" disabled>
+                <span class="btn-icon">🔴</span>
+                <span class="btn-text">Start Recording</span>
+            </button>
+            <button id="stopBtn" class="btn btn-stop" disabled style="display: none;">
+                <span class="btn-icon">⏹️</span>
+                <span class="btn-text">Stop Recording</span>
+            </button>
+        </div>
+
+        <div id="recordingIndicator" class="recording-indicator" style="display: none;">
+            <div class="pulse"></div>
+            <span>Recording... <span id="recordingTime">0:00</span></span>
+        </div>
+
+        <div class="transcription-section">
+            <div class="section-header">
+                <h2>Transcription</h2>
+                <div class="btn-group">
+                    <button id="clearBtn" class="btn btn-clear" disabled>
+                        <span class="btn-icon">🗑️</span>
+                        <span class="btn-text">Clear</span>
+                    </button>
+                    <button id="copyBtn" class="btn btn-copy" disabled>
+                        <span class="btn-icon">📋</span>
+                        <span class="btn-text">Copy Text</span>
+                    </button>
+                </div>
+            </div>
+            <textarea 
+                id="transcriptionText" 
+                class="transcription-output" 
+                placeholder="Your transcribed text will appear here... (editable)"
+            ></textarea>
+        </div>
+
+        <footer>
+            <p>Powered by Whisper Small (English) • All processing happens in your browser</p>
+        </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
