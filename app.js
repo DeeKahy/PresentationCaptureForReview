@@ -18,7 +18,7 @@ const progressText = document.getElementById('progressText');
 const recordingIndicator = document.getElementById('recordingIndicator');
 const recordingTime = document.getElementById('recordingTime');
 
-// State
+// State 
 let transcriber = null;
 let mediaRecorder = null;
 let audioChunks = [];

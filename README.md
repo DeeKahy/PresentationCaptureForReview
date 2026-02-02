@@ -3,7 +3,7 @@
 A completely frontend JavaScript application that records your spoken presentation and converts it to text using Whisper AI - all running in your browser with no server required!
 
 ## Features
-
+ 
 - 🎤 **Browser-based audio recording** - Uses your microphone to capture presentations
 - 🤖 **Whisper Small model** - English-only transcription (~300MB model)
 - 💾 **Automatic caching** - Model downloads once and caches in your browser
